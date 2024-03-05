@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        background-color: #000;
+    }
+
+    .container {
+        height: 38em;
+        width: 23em;
+        background-color: #000;
+        border-radius: 2em;
+        border: 1vw solid #464141b1;
+    }
+
+    #output {
+        height: 2em;
+        width: 100%;
+        margin: 1em 0em;
+        padding-right: 0.2em;
+        background-color: #2c2626;
+        color: #fff;
+        font-size: 3em;
+        text-align: end;
+        border: none;
+        outline: none;
+    }
+
+    .btns {
+        flex-wrap: wrap;
+        width: 96%;
+        margin-left: 0.5rem;
+    }
+
+    .btns .btn {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        margin: 0.5em;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    .zero {
+        height: 3rem;
+        border-radius: 3em;
+        margin-left: 1rem;
+        padding: 0.0rem 4rem;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    .grey {
+        background-color: grey;
+    }
+
+    .o {
+        background-color: rgb(255, 234, 0);
+    }
+
+    button {
+        border: none;
+    }
+
+    button:hover {
+        background-color: red;
+        box-shadow: 1px 1px 10px 5px red;
+        color: #fff;
+        border: none;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="container">
+            <div><input type="text" id="output"></div>
+            <div class="btns">
+                <button class="All-clear btn grey">Ac</button>
+                <button class="deletes btn grey">De</button>
+                <button class="values btn grey">%</button>
+                <button class="values btn o">/</button>
+                <button class="values btn">7</button>
+                <button class="values btn">8</button>
+                <button class="values btn">9</button>
+                <button class="values btn o">*</button>
+                <button class="values btn">4</button>
+                <button class="values btn">5</button>
+                <button class="values btn">6</button>
+                <button class="values btn o">-</button>
+                <button class="values btn">1</button>
+                <button class="values btn">2</button>
+                <button class="values btn">3</button>
+                <button class="values btn o">+</button>
+                <button class="values zero">0</button>
+                <button class="values btn">.</button>
+                <button class="output btn o">Ans</button>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
