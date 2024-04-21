@@ -13,5 +13,21 @@ buttons.forEach((btn) => {
             o_p.value = arrValue.join("");
         }
         else o_p.value = `${o_p.value}${str}`;
+
+        sound(btn, o_p.value);
     });
 });
+
+function sound(e, o_p) {
+    let speech = new SpeechSynthesisUtterance();
+    if (e.innerHTML === "Ac") speech.text = "All clear";
+    else if (e.innerHTML === "De") speech.text = "Delete";
+    else if (e.innerHTML === "Ans") speech.text = `Answer is ${o_p}`;
+    else if (e.innerHTML === "*") speech.text = `multiply`;
+    else if (e.innerHTML === "/") speech.text = `divided`;
+    else if (e.innerHTML === "-") speech.text = `subtrack`;
+    else if (e.innerHTML === "%") speech.text = `modules`;
+    else speech.text = e.innerHTML;
+
+    window.speechSynthesis.speak(speech);
+}
